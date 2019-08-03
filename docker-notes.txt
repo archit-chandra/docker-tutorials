@@ -65,3 +65,8 @@ Docker housekeeping:
 	
 Shelling in the DockerFile:
 	docker -exec -it <container_name> bash
+	
+	
+Automating docker image:
+	fabric8 plugin
+	mvn clean package docker:build
