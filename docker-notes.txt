@@ -69,6 +69,7 @@ Shelling in the DockerFile:
 	
 Automating docker image:
 	fabric8 plugin
+	tcp://192.168.99.100:2376
 	mvn clean package docker:build
 	
 	mvn clean package docker:build docker:push
