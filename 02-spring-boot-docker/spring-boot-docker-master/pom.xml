@@ -23,7 +23,7 @@
 		<java.version>1.8</java.version>
 
 		<!--set this to your docker acct name-->
-		<docker.image.prefix>springframeworkguru</docker.image.prefix>
+		<docker.image.prefix>architbiet</docker.image.prefix>
 
 		<!--Set to name of project-->
 		<docker.image.name>springbootdocker</docker.image.name>
@@ -69,7 +69,7 @@
 					<!--<dockerHost>http://127.0.0.1:2375</dockerHost>-->
 					<!--OSX-->
 					<!--<dockerHost>unix:///var/run/docker.sock</dockerHost>-->
-					<dockerHost>192.168.99.100</dockerHost>
+					<dockerHost>tcp://192.168.99.100:2376</dockerHost>
 
 					<verbose>true</verbose>
 					<images>
