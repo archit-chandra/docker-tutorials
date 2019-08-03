@@ -87,6 +87,12 @@
 									<tag>${project.version}</tag>
 								</tags>
 							</build>
+							<run>
+								<ports>
+									<!--like -p 8080:8080-->
+									<port>8080:8080</port>
+								</ports>
+							</run>
 						</image>
 					</images>
 				</configuration>
