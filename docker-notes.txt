@@ -65,3 +65,18 @@ Docker housekeeping:
 	
 Shelling in the DockerFile:
 	docker -exec -it <container_name> bash
+	
+	
+Automating docker image:
+	fabric8 plugin
+	mvn clean package docker:build
+	
+	mvn clean package docker:build docker:push
+	In settings.xml:
+	<servers>
+        <server>
+            <id>docker.io</id>
+            <username>architbiet</username>
+            <password>@@@@@@@@@@</password>
+        </server>
+    </servers>
