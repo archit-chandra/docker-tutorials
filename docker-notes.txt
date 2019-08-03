@@ -81,3 +81,12 @@ Automating docker image:
             <password>@@@@@@@@@@</password>
         </server>
     </servers>
+	
+	
+Running docker image from Maven:
+	fabric8 plugin
+	tcp://192.168.99.100:2376
+	mvn docker:run
+	mvn docker:start (like -d)
+	
+	mvn docker:stop
