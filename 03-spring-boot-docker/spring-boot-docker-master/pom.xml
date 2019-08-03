@@ -76,7 +76,7 @@
 						<image>
 							<name>${docker.image.prefix}/${docker.image.name}</name>
 							<build>
-								<dockerFileDir>${project.basedir}/src/main/docker/</dockerFileDir>
+                                <dockerFileDir>${project.basedir}/target/dockerfile/</dockerFileDir>
 
 								<!--copies artficact to docker build dir in target-->
 								<assembly>
