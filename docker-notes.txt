@@ -5,3 +5,63 @@ docker rmi <image_name>
 
 docker run -p 27017:27017 -d mongo
 docker logs -f <container_name>
+
+Image     -> 	class file
+				defines container
+				immutable
+				built in layers (each group of commands creates a layer)
+			
+Container -> 	class object (instance of the class)
+
+
+Image Tag Names: [REGISTRY_HOST/][USERNAME/]NAME[:TAG]
+
+DockerFile -> creates the Image
+
+	RUN : executes command(s) in a new layer and creates a new image. 
+	RUN set -x \ : runs multiple command as one command (reduces the number of layers)
+	
+		--hostname : set the specified name as containers hostname
+		--ip       : set specific ip address(ipv4) to that particular container.
+		--name     : set the container name
+	
+	CMD : sets default command and/or parameters, 
+		  which can be overwritten from command line when docker container runs.
+		  
+	ENTRYPOINT : configures a container that will run as an executable.
+	
+	WORKDIR /dir_name : sets the working directory for any
+											RUN
+											CMD
+											ENTRYPOINT
+											COPY
+											ADD 
+						instructions that follow it in the Dockerfile.
+						
+	COPY : copy in a local file or directory from your host
+										(the machine building the Docker image)
+		   into the Docker image itself.
+		   
+	ADD: extract a local tar file into a specific directory in your Docker image
+		   
+	EXPOSE port_1 port_2 port_3 : ports exposed by the image to connect
+	VOLUME some_path : data storage by the image (database)
+
+Port Mapping:
+	docker run -p 27017:27017 -d mongo
+
+Data persistence:
+	docker run -p 27017:27017 -v <host_path_dir>:<docker_path_dir> -d mongo
+							  -v path_to_local_dir:/var/lib/mysql
+
+Environment Variables:
+	-e env_name=env_value
+
+Docker housekeeping:
+	container
+	images
+	volume
+	
+	
+Shelling in the DockerFile:
+	docker -exec -it <container_name> bash
